@@ -7,10 +7,10 @@ def save_data(m_list):
     # sql 문장을 실행시키기 위해 준비
     cursor = con.cursor()
     sql = '''
-    INSERT INTO melon (rank, title, artist)
-    VALUES (?, ?, ?)
+    INSERT INTO melon (title, artist)
+    VALUES (?, ?)
     '''
-    cursor.execute(sql) # sql 을 실행
+    cursor.executemany(sql, m_list) # sql 을 실행
     con.commit() # 적용
     con.close()  # db닫기
 

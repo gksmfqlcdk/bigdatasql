@@ -10,8 +10,8 @@ SELECT * FROM melon where artist = '임영웅'
 '''
 cursor.execute(sql) # sql 을 실행
 # 하나의 데이터를 보기
-data = cursor.fetchone()
-print(data)
+#data = cursor.fetchone()
+#print(data)
 
 # 전체 데이터 보기
 all_data = cursor.fetchall()
